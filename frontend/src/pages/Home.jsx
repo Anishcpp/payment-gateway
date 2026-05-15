@@ -19,13 +19,13 @@ export default function Home() {
   // if (!token) return null; 
 
    return (
-    <div className="min-h-screen bg-[#f4f1ea] px-6 py-8">
+    <div className="min-h-screen bg-[#f4f1ea] px-4 md:px-6 py-6 md:py-8 overflow-x-hidden">
 
       {/* TOP NAVBAR */}
-      <div className="max-w-7xl mx-auto flex items-center justify-between mb-12">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 mb-10 md:mb-12">
 
         <h1
-          className="text-4xl font-bold tracking-tight text-[#2563eb]"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#2563eb] break-words"
           style={{ fontFamily: 'Space Grotesk' }}
         >
           Probably<span className="text-black">ABank</span>
@@ -33,7 +33,7 @@ export default function Home() {
 
         <button
           onClick={handleLogout}
-          className="bg-black hover:bg-gray-800 text-white px-5 py-2 rounded-xl transition duration-300"
+          className="bg-black hover:bg-gray-800 text-white px-3 md:px-5 py-2 rounded-xl transition duration-300 text-sm md:text-base whitespace-nowrap"
         >
           Log Out
         </button>
@@ -42,13 +42,13 @@ export default function Home() {
       {/* HERO SECTION */}
       <div className="max-w-7xl mx-auto mb-14">
 
-        <h2 className="text-6xl font-bold text-gray-900 leading-tight">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight max-w-[320px] sm:max-w-none">
           Everything money.
           <br />
           One dashboard.
         </h2>
 
-        <p className="mt-6 text-lg text-gray-600 max-w-2xl leading-8">
+        <p className="mt-5 md:mt-6 text-base md:text-lg text-gray-600 max-w-2xl leading-7 md:leading-8">
           Manage bank accounts, make UPI transfers, track balances,
           and handle payments — all from one place.
         </p>
@@ -60,14 +60,14 @@ export default function Home() {
         {/* BANK CARD */}
         <Link to="/dashboard">
 
-          <div className="bg-[#0f172a] text-white rounded-[28px] p-10  h-[320px] flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-xl cursor-pointer">
+          <div className="bg-[#0f172a] text-white rounded-[28px] p-10 min-h-[380px] md:min-h-[320px] flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-xl cursor-pointer">
 
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-gray-400">
                 Banking
               </p>
 
-              <h3 className="text-4xl font-bold mt-4">
+              <h3 className="text-3xl md:text-4xl font-bold mt-4">
                 Accounts & Balances
               </h3>
 
@@ -77,13 +77,13 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 
               <p className="text-[#7dd3fc] font-semibold">
                 Open Dashboard →
               </p>
 
-              <div className="bg-white/10 px-4 py-2 rounded-xl text-sm">
+              <div className="bg-white/10 px-3 md:px-4 py-2 rounded-xl text-xs md:text-sm">
                 Secure Banking
               </div>
             </div>
@@ -93,18 +93,18 @@ export default function Home() {
         {/* UPI CARD */}
         <Link to="/upi">
 
-          <div className="bg-white rounded-[28px] p-10 h-[320px]  flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-xl border border-gray-200 cursor-pointer">
+          <div className="bg-white rounded-[28px] p-6 md:p-10 min-h-[320px]  flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-xl border border-gray-200 cursor-pointer">
 
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
                 Payments
               </p>
 
-              <h3 className="text-4xl font-bold mt-4 text-gray-900">
+              <h3 className="text-3xl md:text-4xl font-bold mt-4 text-gray-900">
                 UPI & Transfers
               </h3>
 
-              <p className="mt-6 text-gray-600 leading-8 text-lg">
+              <p className="mt-6 text-gray-600 leading-8 text-base md:text-lg">
                 Send money instantly, manage UPI IDs,
                 and transfer funds without the drama.
               </p>
@@ -116,7 +116,7 @@ export default function Home() {
                 Start Transfer →
               </p>
 
-              <div className="bg-gray-100 px-4 py-2 rounded-xl text-sm text-gray-700">
+              <div className="bg-gray-100 px-3 md:px-4 py-2 rounded-xl text-xs md:text-sm text-gray-700">
                 Instant Payments
               </div>
             </div>
